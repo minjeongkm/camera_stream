@@ -25,7 +25,7 @@
                     canvas.height = video.videoHeight;
                     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     const frame = canvas.toDataURL('image/jpeg');
-                    fetch('http://<192.168.100.11>:5000/upload', {  // 서버로 전송
+                    fetch('http://<192.168.45.62>:5000/upload', {  // 서버로 전송
                         method: 'POST',
                         body: JSON.stringify({ image: frame }),
                         headers: { 'Content-Type': 'application/json' },
